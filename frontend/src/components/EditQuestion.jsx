@@ -30,7 +30,7 @@ const[select,setSelect] = useState('')
 
   const handleUpdate = async (id) => {
     try {
-      const update = await axios.put(`http://localhost:5001/updateQuestion/${id}`, question);
+      const update = await axios.put(`https://mern-quiz-ghma.onrender.com/updateQuestion/${id}`, question);
       console.log(question);
       setCounter(counter + 1)
       if (update) {
@@ -44,7 +44,7 @@ const[select,setSelect] = useState('')
 
   const handleDelete = async (id) => {
     try {
-      const isDelete = await axios.delete(`http://localhost:5001/deleteQuestion/${id}`);
+      const isDelete = await axios.delete(`https://mern-quiz-ghma.onrender.com/deleteQuestion/${id}`);
      setQuestion({
       'question': '',
     'option1': '',
@@ -63,7 +63,7 @@ const[select,setSelect] = useState('')
   
   
   const handleSelect = async (item) => {
-    await axios.get(`http://localhost:5001/getQuestion/${item}`).then((res) => {
+    await axios.get(`https://mern-quiz-ghma.onrender.com/getQuestion/${item}`).then((res) => {
       setQuestion({
         'question': res.data.question,
         'option1': res.data.option1,
@@ -78,7 +78,7 @@ const[select,setSelect] = useState('')
   }
 
   useEffect(() => {
-    axios.get("http://localhost:5001/getQuestions").then((res) => {
+    axios.get("https://mern-quiz-ghma.onrender.com/getQuestions").then((res) => {
       setDatas(res.data)
       // console.log(res.data)
     })

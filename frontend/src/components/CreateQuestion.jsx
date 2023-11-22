@@ -27,7 +27,7 @@ const CreateQuestion = () => {
 
   const handleCreate = async () => {
     try {
-      const response = await axios.post("http://localhost:5001/createQuestion", question);
+      const response = await axios.post("https://mern-quiz-ghma.onrender.com/createQuestion", question);
       console.log(response);
   
       // Assuming the server returns a successful response status
