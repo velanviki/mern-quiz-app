@@ -27,7 +27,7 @@ const CreateQuestion = () => {
 
   const handleCreate = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/createQuestion", question);
+      const response = await axios.post("http://localhost:5001/createQuestion", question);
       console.log(response);
   
       // Assuming the server returns a successful response status

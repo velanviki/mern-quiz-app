@@ -8,7 +8,7 @@ const Cards = () => {
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
-        axios.get("http://localhost:5000/getQuestions").then((res) => {
+        axios.get("http://localhost:5001/getQuestions").then((res) => {
             setDatas(res.data)
 
             // console.log(res.data)
