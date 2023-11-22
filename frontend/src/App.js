@@ -4,21 +4,20 @@ import EditQuestion from './components/EditQuestion';
 import Cards from './components/Cards';
 
 import Navbar from './components/Navbar';
-import {Routes,Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
     <div className="App">
-    <Navbar />
+      <Navbar />
       <Routes>
+        <Route path="/" element={<Cards />} />
         <Route path="/createQuestion" element={<CreateQuestion />} />
         <Route path="/editQuestion" element={<EditQuestion />} />
-        <Route path="/" element={<Cards />} />
-
       </Routes>
     </div>
-    
+
   );
 }
 
