@@ -98,24 +98,9 @@ const Cards = () => {
 
                             </> :
 
-                                // <div>
-                                //     <p className='text'>Congratulations!!!</p>
-                                //     <a href="#" className="btn btn-primary" onClick={() => (setIndex(0))}>Try Again</a>
-                                // </div>
                                 <div>
                                     <p className='text'>Congratulations!!!</p>
-                                    <a
-                                        href="#"
-                                        className="btn btn-primary"
-                                        onClick={() => {
-                                            // Show the message for 2 seconds and then reset the index
-                                            setTimeout(() => {
-                                                setIndex(0);
-                                            }, 2000); // 2000 milliseconds (2 seconds)
-                                        }}
-                                    >
-                                        Try Again
-                                    </a>
+                                    <a href="#" className="btn btn-primary" onClick={() => (setIndex(0))}>Try Again</a>
                                 </div>
 
 
